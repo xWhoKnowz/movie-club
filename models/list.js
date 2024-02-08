@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Lists extends Model {}
+class List extends Model {}
 
-Project.init(
+List.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -34,6 +34,13 @@ Project.init(
     rating: {
         type: DataTypes.STRING,
         allowNull: false,
+    },
+    user_id: {
+      type: DataTypes.STRING,
+      references: {
+        model: 'user',
+        key: 'id',
+      },
     }
   },
   {
@@ -45,4 +52,4 @@ Project.init(
   }
 );
 
-module.exports = Lists;
+module.exports = List;
