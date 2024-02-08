@@ -32,11 +32,12 @@ Movie.init(
           allowNull: false,
       },
       list_id: {
-        type: DataTypes.STRING,
-        references:{
-          model: 'list',
-          key: 'id',
-        } 
+        type: DataTypes.INTEGER,
+        references: {
+          model: `list`,
+          key: `id`          
+        },
+        allowNull: false
       }
     },
     {

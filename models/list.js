@@ -19,10 +19,6 @@ List.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    review: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
     poster: {
       type: DataTypes.STRING,
       allowNull: false,

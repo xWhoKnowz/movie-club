@@ -17,26 +17,32 @@ Review.init(
     },
     body: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
     },
     movie_id: {
-      type: DataTypes.STRING,
-      references: {
-        model: 'movie',
-        key: 'id',
-      },
+      type: DataTypes.INTEGER,
+        references: {
+          model: `movie`,
+          key: `id`          
+        },
+        allowNull: false
     },
     user_id: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       references: {
-        model: 'user',
-        key: 'id',
+        model: `user`,
+        key: `id`          
       },
-    }
+      allowNull: false
+    },
+    rating: {
+      type: DataTypes.DECIMAL,
+      allowNull: false
+    },
   },
   {
     sequelize,
-    timestamps: false,
+    timestamps: true,
     freezeTableName: true,
     underscored: true,
     modelName: 'review',
