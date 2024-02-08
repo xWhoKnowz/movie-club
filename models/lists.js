@@ -3,7 +3,7 @@ const sequelize = require('../config/connection');
 
 class Lists extends Model {}
 
-Project.init(
+Lists.init(
   {
     id: {
       type: DataTypes.INTEGER,
