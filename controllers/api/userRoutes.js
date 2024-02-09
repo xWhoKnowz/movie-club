@@ -8,8 +8,9 @@ router.post("/", async (req, res) => {
     req.session.save(() => {
       req.session.user_id = newUser.id;
       req.session.logged_in = true;
-      res.session.is_admin = newUser.isAdmin
-
+     if(newUser.is_admin === true) {
+      res.session.is_admin = true
+     }
       res.status(200).json(newUser);
     });
   } catch (err) {
