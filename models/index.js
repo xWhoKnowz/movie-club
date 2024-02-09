@@ -14,18 +14,20 @@ List.belongsTo(User, {
 
 User.hasMany(Review, {
     foreignKey: 'user_id',
+    onDelete: 'CASCADE'
 });
 
 Review.belongsTo(User, {
-    foreignKey: 'user_id',
+    foreignKey: 'user_id'
 });
 
 User.hasMany(Comment, {
     foreignKey: 'user_id',
+    onDelete: 'CASCADE'
 });
 
 Comment.belongsTo(User, {
-    foreignKey: 'user_id',
+    foreignKey: 'user_id'
 });
 
 List.hasMany(Movie, {
@@ -38,14 +40,16 @@ Movie.belongsTo(List, {
 
 Movie.hasMany(Review, {
     foreignKey: 'movie_id',
+    onDelete: 'CASCADE'
 })
 
 Review.belongsTo(Movie, {
-    foreignKey: 'movie_id',
+    foreignKey: 'movie_id'
 });
 
 Review.hasMany(Comment, {
     foreignKey: 'review_id',
+    onDelete: 'CASCADE'
 });
 
 Comment.belongsTo(Review, {
