@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { List } = require('../../models');
+const { User, List } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.post('/', withAuth, async (req, res) => {
@@ -11,7 +11,10 @@ router.post('/', withAuth, async (req, res) => {
         poster: req.params.Poster,
         summary: req.params.overview,
         rating: req.params.body.User,
-        list_id: req.body.list_id,
+    });
+
+    const newListUser = await User.create({
+        userId: req.body.user_id,
     });
 
     res.status(200).json(newList);

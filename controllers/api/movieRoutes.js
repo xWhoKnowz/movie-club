@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Movie } = require('../../models');
+const { Movie, List } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.post('/', withAuth, async (req, res) => {
@@ -14,7 +14,11 @@ router.post('/', withAuth, async (req, res) => {
         list_id: req.body.list_id,
     });
 
-    res.status(200).json(newMovie);
+    const newMovieListId = await List.create({
+        listId: req.body.list_id,
+    });
+
+    res.status(200).json(newMovie + " " + newMovieListId);
   } catch (err) {
     res.status(400).json(err);
   }
