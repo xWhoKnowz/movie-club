@@ -27,10 +27,6 @@ List.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    rating: {
-        type: DataTypes.STRING,
-        allowNull: false,
-    },
     user_id: {
       type: DataTypes.STRING,
       references: {
