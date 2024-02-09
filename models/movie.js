@@ -28,7 +28,7 @@ Movie.init(
         allowNull: false,
       },
       rating: {
-          type: DataTypes.STRING,
+          type: DataTypes.DECIMAL (10,1),
           allowNull: false,
       },
       list_id: {

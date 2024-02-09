@@ -1,35 +1,30 @@
 const router = require('express').Router();
-const { Movie, List } = require('../../models');
+const { Movie } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-router.post('/', withAuth, async (req, res) => {
+router.post('/', [withAuth, isAdmin], async (req, res) => {
   try {
     const newMovie = await Movie.create({
-        id: req.params.id,
-        runTime: req.params.runtime,
-        title: req.params.original_title,
-        poster: req.params.Poster,
-        summary: req.params.overview,
-        rating: req.params.body.User,
+        id: req.body.id,
+        run_time: req.body.runtime,
+        title: req.body.original_title,
+        poster: req.body.Poster,
+        summary: req.body.overview,
+        rating: req.body.rating,
         list_id: req.body.list_id,
     });
 
-    const newMovieListId = await List.create({
-        listId: req.body.list_id,
-    });
-
-    res.status(200).json(newMovie + " " + newMovieListId);
+    res.status(200).json(newMovie);
   } catch (err) {
     res.status(400).json(err);
   }
 });
 
-router.delete('/:id', withAuth, async (req, res) => {
+router.delete('/:id', [withAuth, isAdmin], async (req, res) => {
   try {
     const movieData = await Movie.destroy({
       where: {
         id: req.params.id,
-        user_id: req.session.user_id,
       },
     });
 
@@ -37,7 +32,6 @@ router.delete('/:id', withAuth, async (req, res) => {
       res.status(404).json({ message: 'No movie found with this id!' });
       return;
     }
-
     res.status(200).json(movieData);
   } catch (err) {
     res.status(500).json(err);
