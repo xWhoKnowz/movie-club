@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { List, Movie, Review, User } = require('../models');
+const isAdmin = require('../utils/isAdmin');
 
 router.get (`/`, async (req, res) =>{
 try {
@@ -23,4 +24,10 @@ try {
 }
 });
 
-router.get
+router.get(`/admin`, [withAuth, isAdmin], async (req, res) =>{
+    try {
+        
+    } catch (error) {
+        
+    }
+});
