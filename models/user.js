@@ -35,7 +35,7 @@ User.init(
         len: [8],
       },
     },
-    is_admin: {
+    isAdmin: {
         type: DataTypes.BOOL,
         defaultValue: false,
         allowNull: false
