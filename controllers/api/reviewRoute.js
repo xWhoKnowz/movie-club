@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { Review } = require('../../models');
-const withAuth = require('../../utils/auth');
+const withAuth = require('../../utils/withAuth');
 
 // get route to find all reviews (non mandatory rn!)
 

@@ -16,14 +16,14 @@ Comment.init(
       allowNull: false,
     },
     review_id: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       references: {
         model: 'review',
         key: 'id',
       },
     },
     user_id: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       references: {
         model: 'user',
         key: 'id',
