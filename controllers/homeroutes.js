@@ -21,7 +21,7 @@ try {
         logged_in: req.session.logged_in
     });
 } catch (error) {
-    res.status(500).json(error)
+    res.status(500).json(error);
 }
 });
 
@@ -30,7 +30,6 @@ router.get(`/admin`, [withAuth, isAdmin], async (req, res) =>{
 
         res.render(`admin`, {
 
-        
         });
     } catch (error) {
         res.status(500).json(error);
