@@ -5,7 +5,7 @@ const listRoutes = require(`./listRoutes`);
 const reviewRoutes = require(`./reviewRoute`);
 const commentRoutes = require(`./commentRoute`);
 
-router.use(`/users`, userRoutes);
+router.use(`/user`, userRoutes);
 router.use(`/movie`, movieRoutes);
 router.use(`/list`, listRoutes);
 router.use(`/review`, reviewRoutes);

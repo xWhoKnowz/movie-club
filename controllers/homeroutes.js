@@ -29,7 +29,7 @@ router.get(`/admin`, [withAuth, isAdmin], async (req, res) =>{
     try {
 
         res.render(`admin`, {
-
+ 
         });
     } catch (error) {
         res.status(500).json(error);
@@ -45,7 +45,7 @@ router.get(`/login`, (req, res) => {
     };
 });
 
-router.get(`movies`, withAuth, async (req, res) => {
+router.get(`/movie`, withAuth, async (req, res) => {
     try {
         
         const movieData = await Movie.findByPk(req.params.id, {
@@ -78,7 +78,7 @@ router.get(`movies`, withAuth, async (req, res) => {
 });
 
 
-router.get(`user`, withAuth, async (req, res) => {
+router.get(`/user`, withAuth, async (req, res) => {
     try {
         const userData = User.findByPk(req.session.user_id, {
             attributes: { exclude:[`password`]},
