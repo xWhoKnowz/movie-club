@@ -9,7 +9,7 @@ try {
         include: [
             {
                 model: Movie,
-                attributes: [title, poster, rating, run_time]
+                attributes: [title, poster, rating, run_time, summary]
             },
         ],
     });
@@ -28,8 +28,21 @@ try {
 router.get(`/admin`, [withAuth, isAdmin], async (req, res) =>{
     try {
 
+        const lists = await List.findAll({
+            include: [
+                {
+                    model: Movie,
+                    attributes: [title, poster, rating, run_time, summary]
+                },
+            ],
+        });
+    
+        const allLists = lists.get({ plain: true })
+
+
         res.render(`admin`, {
- 
+            allLists,
+            logged_in: req.session.logged_in
         });
     } catch (error) {
         res.status(500).json(error);

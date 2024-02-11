@@ -1,5 +1,5 @@
-const router = require(`express`).Router();
-const { User } = require(`../../models`);
+const router = require('express').Router();
+const { User } = require('../../models');
 
 router.post("/", async (req, res) => {
   try {
@@ -10,11 +10,9 @@ router.post("/", async (req, res) => {
     });
 
     req.session.save(() => {
-      req.session.user_id = newUser.id;
       req.session.logged_in = true;
-     if(newUser.is_admin === true) {
-      res.session.is_admin = true
-     }
+
+      
       res.status(200).json(newUser);
     });
   } catch (err) {
@@ -35,7 +33,7 @@ router.post(`/login`, async (req, res) => {
       return;
     }
 
-    const password = await userData.checkPassword(req.body.password);
+    const password = await user.checkPassword(req.body.password);
 
     if (!password) {
       res
@@ -47,7 +45,7 @@ router.post(`/login`, async (req, res) => {
     }
 
     req.session.save(() => {
-      req.session.user_id = userData.id;
+      req.session.user_id = user.id;
       req.session.logged_in = true;
 
       res.json({ user: user, message: "Welcome to Fresh Tomatoes!" });
