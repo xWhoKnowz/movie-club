@@ -81,11 +81,18 @@ router.get(`movies`, withAuth, async (req, res) => {
 router.get(`user`, withAuth, async (req, res) => {
     try {
         const userData = User.findByPk(req.session.user_id, {
-            
+            attributes: { exclude:[`password`]},
+            include: [{model: Review}]
         })
-        
+
+        const user = userData.get({ plain: true });
+
+        res.render(`user`, {
+         ...user,
+         logged_in: true   
+        });    
     } catch (error) {
-        
+        res.status(500).json(err);
     }
 });
 
