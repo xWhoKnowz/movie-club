@@ -33,7 +33,7 @@ router.post(`/login`, async (req, res) => {
       return;
     }
 
-    const password = await userData.checkPassword(req.body.password);
+    const password = await user.checkPassword(req.body.password);
 
     if (!password) {
       res
@@ -45,7 +45,7 @@ router.post(`/login`, async (req, res) => {
     }
 
     req.session.save(() => {
-      req.session.user_id = userData.id;
+      req.session.user_id = user.id;
       req.session.logged_in = true;
 
       res.json({ user: user, message: "Welcome to Fresh Tomatoes!" });
