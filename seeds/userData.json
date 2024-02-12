@@ -3,7 +3,7 @@
         "username": "SallyFrank123",
         "email": "123SallyFrank@email.com",
         "password": "SallySal",
-        "is_admin": "true"
+        "is_admin": true
     },
     {
         "username": "StevenCharles432",

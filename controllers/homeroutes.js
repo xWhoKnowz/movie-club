@@ -36,12 +36,12 @@ router.get(`/admin`, [withAuth, isAdmin], async (req, res) =>{
             include: [
                 {
                     model: Movie,
-                    attributes: [title, poster, rating, run_time, summary]
+                    // attributes: [title, poster, rating, run_time, summary]
                 },
             ],
         });
     
-        const allLists = lists.get({ plain: true })
+        const allLists = lists.map(list => list.get({plain: true}))
 
 
         res.render(`admin`, {
@@ -49,6 +49,7 @@ router.get(`/admin`, [withAuth, isAdmin], async (req, res) =>{
             logged_in: req.session.logged_in
         });
     } catch (error) {
+        console.log(error);
         res.status(500).json(error);
     }
 });
@@ -97,7 +98,7 @@ router.get(`/movie`, withAuth, async (req, res) => {
 
 router.get(`/user`, withAuth, async (req, res) => {
     try {
-        const userData = User.findByPk(req.session.user_id, {
+        const userData = await User.findByPk(req.session.user_id, {
             attributes: { exclude:[`password`]},
             include: [{model: Review}]
         })
@@ -109,7 +110,7 @@ router.get(`/user`, withAuth, async (req, res) => {
          logged_in: true   
         });    
     } catch (error) {
-        res.status(500).json(err);
+        res.status(500).json(error);
     }
 });
 
