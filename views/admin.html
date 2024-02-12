@@ -23,7 +23,7 @@
   </header>
 
   <main>
-    <section>
+    <section class=" d-flex flex-row col-12">
       <div class="col-4">
         <section>
           <h2>Search for a Movie</h2>
@@ -31,15 +31,28 @@
             <input type="text" id="artist-input" placeholder="Search artist here..">
             <button type="submit" class="btn">Search</button>
           </form>
-          
-  
         </section>
         <button class="btn-">
-          <a href="./savedCards.html">
+          <a href="">
           See Lists
         </a>
         </button>
       </div>
+
+     
+        
+      <div class="card col-6"">
+        <div class="card-header">
+          {{Title}}
+          <img class="card-img-top" src="" alt="Card image cap">
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">{{rating}}</li>
+          <li class="list-group-item">{{run_time}}</li>
+          <li class="list-group-item">{{summary}}</li>
+        </ul>
+      </div>
+        
 
     </section>
     
