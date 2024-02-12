@@ -1,0 +1,28 @@
+[
+    {
+        "username": "SallyFrank123",
+        "email": "123SallyFrank@email.com",
+        "password": "SallySal",
+        "is_admin": "true"
+    },
+    {
+        "username": "StevenCharles432",
+        "email": "432StevenCharles@email.com",
+        "password": "SteveChar"
+    },
+    {
+        "username": "KyleWigin594",
+        "email": "594KyleWigin@email.com",
+        "password": "KyleWigi"
+    },
+    {
+        "username": "EpcotHomes674",
+        "email": "674EpcotHomes@email.com",
+        "password": "EpcotHome"
+    },
+    {
+        "username": "BaileyMorris984",
+        "email": "984BaileyMorris@email.com",
+        "password": "BaileyBail"
+    }
+]
