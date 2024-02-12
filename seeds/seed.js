@@ -8,17 +8,21 @@ const listData = require('./listData.json');
 const commentData = require('./commentData.json');
 
 const seedDatabase = async () => {
-    await sequelize.sync();
+    await sequelize.sync({force: true});
   
     const users = await User.bulkCreate(userData, {
     returning: true,
     });
 
     const lists = await List.bulkCreate(listData, {
-       
-        
     });
 
+    for (const movies of movieData) {
+      await Movie.create({
+        ...movies,
+        list_id: lists[Math.floor(Math.random() * users.length)].id,
+      });
+    }  
 
     for (const reviews of reviewData) {
       await Review.create({
@@ -34,12 +38,6 @@ const seedDatabase = async () => {
         });
     }
 
-    for (const movies of movieData) {
-        await Movie.create({
-          ...movies,
-          list_id: lists[Math.floor(Math.random() * users.length)].id,
-        });
-    }  
     process.exit(0);
   };
   
