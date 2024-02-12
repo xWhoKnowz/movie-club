@@ -1,17 +1,22 @@
 [
     {
+        "name": "Top of the Month",
         "user_id": 1
     },
     {
+        "name": "Action",
         "user_id": 1
     },
     {
+        "name": "Romance",
         "user_id": 1
     },
     {
+        "name": "Comedy",
         "user_id": 1
     },
     {
+        "name": "Drama",
         "user_id": 1
     }
 ]

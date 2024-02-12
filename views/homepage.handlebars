@@ -1,72 +1,24 @@
-<nav class="navbar navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-      <img src="" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-      FreshTomatoes
-    </a>
-    <button href="" type="button" class="btn btn-link">Sign Up</button>
-  </div>
-</nav>
+<p class="text-center fs-2">Welcome to Fresh Tomatoes!!</p>
+<p class="text-center">Please sign up/login to create a review.</p>
 
-<h1>Welcome to Fresh Tomatoes!!</h1>
-<h3>Please sign up/login to create a review.</h3>
+{{log this}}
 
-<div class="card" stle="width: 30rem;">
-    <div class="card-body">
-        <h2 class="card-title">Top 10 Movies</h2>
+<div class="card position-relative" stle="width: 20rem;">
+    <div class="card-body p">
+        <p class="card-title text-center">{{name}}</p>
         <div id="default-carousel" class="relative w-full" data-carousel="slide">
             <!-- Carousel wrapper -->
             <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
                 <!-- Item 1 -->
+                {{#each movies as |movie|}}
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src={{movie.poster}} class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                        alt={{movie.title}}>
+                    <a href="/movie/{{movie.id}}">
+                        <img style="height: 500px; width:300px" src="{{movie.poster}}"
+                            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                            alt="{{movie.summary}}">
+                    </a>
                 </div>
-                <!-- Item 2 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src={{movie.poster}}  class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                        alt={{movie.title}}>
-                </div>
-                <!-- Item 3 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src={{movie.poster}} class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                        alt={{movie.title}}>
-                </div>
-                <!-- Item 4 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src={{movie.poster}} class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                        alt={{movie.title}}>
-                </div>
-                <!-- Item 5 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src={{movie.poster}} class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                        alt={{movie.title}}>
-                </div>
-                <!-- Item 6 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src={{movie.poster}} class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                        alt={{movie.title}}>
-                </div>
-                <!-- Item 7 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src={{movie.poster}}  class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                        alt={{movie.title}}>
-                </div>
-                <!-- Item 8 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src={{movie.poster}} class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                        alt={{movie.title}}>
-                </div>
-                <!-- Item 9 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src={{movie.poster}} class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                        alt={{movie.title}}>
-                </div>
-                <!-- Item 10 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src={{movie.poster}} class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                        alt={{movie.title}}>
-                </div>
+                {{/each}}
             </div>
             <!-- Slider indicators -->
             <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
@@ -80,16 +32,6 @@
                     data-carousel-slide-to="3"></button>
                 <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5"
                     data-carousel-slide-to="4"></button>
-                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 6"
-                    data-carousel-slide-to="5"></button>
-                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 7"
-                    data-carousel-slide-to="6"></button>
-                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 8"
-                    data-carousel-slide-to="7"></button>
-                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 9"
-                    data-carousel-slide-to="8"></button>
-                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 10"
-                    data-carousel-slide-to="9"></button>
             </div>
             <!-- Slider controls -->
             <button type="button"
@@ -122,6 +64,3 @@
         <h1 class="Card-text">{{movie.title}}</h1>
     </div>
 </div>
-
-<h3>Terms of Services: Please refrain from any profanity and most of all...</h3>
-<h3>NO SPOILERS! You will be removed from the site.</h3>
