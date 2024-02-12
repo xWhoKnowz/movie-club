@@ -1,72 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"/>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../public/css/style.css">
 </head>
 
 
 <body>
-  <header>
-    <nav>Fresh Tomatoes</nav>
+  <header class="header">
+    <nav class="d-flex flex-row justify-content-between">
+      <h1>Fresh Tomatoes</h1>
+      <button class="btn-primary">Logout</button>
+    </nav>
 
     <img src="" alt="">
 
     <h1>{{username}}</h1>
   </header>
 
-  <main>
-    <section></section>
-    <section class="d-flex flex-row justify-content-between">
-      <div class="card" style="width: 18rem;">
+  <main class=" d-flex flex-row col-12">
+    <section class="lists col-3 d-flex flex-column align-items-center">
+      <h2 class="title">Movie Lists</h2>
+      
+      <button class="btn-primary listBtn">
+        <a href="">
+          New List
+        </a>
+      </button>
 
-            <div class="card-body">
-                <h5 class="card-title">{{{ movie.title }}}</h5>
-                <p class="card-text"> {{{ movie.review }}}</p>
-            </div>
-            <ul class="list-group list-group-flush">
-                <li class="comment-1">{{{ user.comment }}}</li>
-                <li class="comment-2">{{{ user.comment }}}</li>
-                <li class="comment-3">{{{ user.comment }}}</li>
-            </ul>
-        </div>
+      <button class="btn-secondary listBtn">
+        <a href="">
+          January List
+        </a>
+      </button>
 
+      <button class="btn-secondary listBtn">
+        <a href="">
+          February List
+        </a>
+      </button>
 
-        <div class="card" style="width: 18rem;">
-        
-            <div class="card-body">
-                <h5 class="card-title">{{{ movie.title }}}</h5>
-                <p class="card-text"> {{{ movie.review }}}</p>
-            </div>
-            <ul class="list-group list-group-flush">
-                <li class="comment-1">{{{ user.comment }}}</li>
-                <li class="comment-2">{{{ user.comment }}}</li>
-                <li class="comment-3">{{{ user.comment }}}</li>
-            </ul>
-        </div>
-        
-        
-        <div class="card" style="width: 18rem;">
-        
-            <div class="card-body">
-                <h5 class="card-title">{{{ movie.title }}}</h5>
-                <p class="card-text"> {{{ movie.review }}}</p>
-            </div>
-            <h4>Comments</h4>
-            <ul class="list-group list-group-flush">
-                <li class="comment-1">{{{ user.comment }}}</li>
-                <li class="comment-2">{{{ user.comment }}}</li>
-                <li class="comment-3">{{{ user.comment }}}</li>
-            </ul>
-        </div>
+      <button class="btn-secondary listBtn">
+        <a href="">
+          Valentines List
+        </a>
+      </button>
+
     </section>
+
+
+    <section class=" d-flex flex-column col-12">
+
+      <section>
+
+        <form id="artist-search">
+          <input type="text" id="artist-input" placeholder="Search for Movies...">
+          <button type="submit" class="btn">Search</button>
+        </form>
+      </section>
+
+      <section class="card col-7"">
+        <div class=" card-header">
+        {{Title}}
+        <img class="card-img-top" src="" alt="Movie Poster">
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">{{rating}}</li>
+          <li class="list-group-item">{{run_time}}</li>
+          <li class="list-group-item">{{summary}}</li>
+        </ul>
+      </section>
+
+      <div class="card col-7"">
+        <div class=" card-header">
+        {{Title}}
+        <img class="card-img-top" src="" alt="Movie Poster">
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">{{rating}}</li>
+        <li class="list-group-item">{{run_time}}</li>
+        <li class="list-group-item">{{summary}}</li>
+      </ul>
+      </div>
+
+      <div class="card col-7"">
+        <div class=" card-header">
+        {{Title}}
+        <img class="card-img-top" src="" alt="Movie Poster">
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">{{rating}}</li>
+        <li class="list-group-item">{{run_time}}</li>
+        <li class="list-group-item">{{summary}}</li>
+      </ul>
+      </div>
+
+      <div class="card col-7"">
+        <div class=" card-header">
+        {{Title}}
+        <img class="card-img-top" src="" alt="Movie Poster">
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">{{rating}}</li>
+        <li class="list-group-item">{{run_time}}</li>
+        <li class="list-group-item">{{summary}}</li>
+      </ul>
+      </div>
+
+      <div class="card col-7"">
+        <div class=" card-header">
+        {{Title}}
+        <img class="card-img-top" src="" alt="Movie Poster">
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">{{rating}}</li>
+        <li class="list-group-item">{{run_time}}</li>
+        <li class="list-group-item">{{summary}}</li>
+      </ul>
+      </div>
+
+    </section>
+
+
   </main>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-  <script src="/js/movieAPI.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <!-- <script src="../public/js/movieAPI.js"></script> -->
 </body>
+
 </html>
