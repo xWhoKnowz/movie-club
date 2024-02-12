@@ -1,0 +1,46 @@
+<!-- Splash Section -->
+<div class = "splash-container">
+    <img src = "{{{ getOpenApi move.poster }}}" alt = "movie splash background">
+    <h1>{{{ user.username }}}</h1>
+</div>
+
+<!-- Reviews Section --> 
+<div class="card" style="width: 18rem;">
+<img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-body">
+        <h5 class="card-title">{{{ getMovieApi movie.title }}}</h5>
+        <p class="card-text"> {{{ getMovieApi movie.review }}}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="comment-1">{{{ user.comment }}}</li>
+        <li class="comment-2">{{{ user.comment }}}</li>
+        <li class="comment-3">{{{ user.comment }}}</li>
+    </ul>
+</div>   
+<div class="card" style="width: 18rem;">
+<img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-body">
+        <h5 class="card-title">{{{ movie.title }}}</h5>
+        <p class="card-text"> {{{ movie.review }}}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="comment-1">{{{ user.comment }}}</li>
+        <li class="comment-2">{{{ user.comment }}}</li>
+        <li class="comment-3">{{{ user.comment }}}</li>
+    </ul>
+</div> 
+<div class="card" style="width: 18rem;">
+<img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-body">
+        <h5 class="card-title">{{{ getMovieApi movie.title }}}</h5>
+        <p class="card-text"> {{{ getMovieApi movie.review }}}</p>
+    </div>
+    <h4>Comments</h4>
+    <ul class="list-group list-group-flush">
+        <li class="comment-1">{{{ user.comment }}}</li>
+        <li class="comment-2">{{{ user.comment }}}</li>
+        <li class="comment-3">{{{ user.comment }}}</li>
+    </ul>
+</div> 
+
+<script src="./js/profile.js"></script>

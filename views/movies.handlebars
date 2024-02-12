@@ -1,0 +1,108 @@
+<!-- Movie Header section --->
+<div class="row mt-4">
+  <div class="col-md-6">
+    <img src = "{{{ movie.poster }}}" alt = "movie splash background">
+    <h2>{{{ user.name }}}</h2>
+        <div class="card" style="width: 18rem;">
+            <div class="card-header">
+                Movie Rundown
+         </div>
+         <ul class="list-group list-group-flush">
+                <li class="movie-run-time">Run time: {{{ getMovieApi movie.runtime }}} minutes</li>
+             <li class="movie-rating">Rating: {{{ getMovieApi movie.rating }}}</li>
+                <li class="movie-genre">Genre: {{{ getMovieApi movie.genres[0] }}}</li>
+                <li class="movie-lang">Genre: {{{ getMovieApi movie.spoken_language[0].name }}}</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                Summary
+            </div>
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                <p>{{{ movie.summary }}}</p>
+                </blockquote>
+            </div>
+        </div>
+
+        <!-- Director/ Cast section --->
+        <div class="card-deck">
+            <div class="card">
+                <h3>Director/ Cast</h3>
+                <img class="card-img-top" src="..." alt="Card image cap">
+                <div class="card-body">
+                <h5 class="card-title">Director</h5>
+                <p class="card-text">{{{ getOpenApi movie.director }}}</p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="..." alt="Card image cap">
+                <div class="card-body">
+                <h5 class="card-title">Director</h5>
+                <p class="card-text">{{{ getOpenApi movie.actor }}}</p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="..." alt="Card image cap">
+                <div class="card-body">
+                <h5 class="card-title">Actor</h5>
+                <p class="card-text">{{{ getOpenApi movie.actor }}}</p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="..." alt="Card image cap">
+                <div class="card-body">
+                <h5 class="card-title">Actor</h5>
+                <p class="card-text">{{{ getOpenApi movie.actor }}}</p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="..." alt="Card image cap">
+                <div class="card-body">
+                <h5 class="card-title">Actor</h5>
+                <p class="card-text">{{{ getOpenApi movie.actor }}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reviews Section --> 
+    <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{{ getMovieApi movie.title }}}</h5>
+            <p class="card-text"> {{{ getMovieApi movie.review }}}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="comment-1">{{{ user.comment }}}</li>
+            <li class="comment-2">{{{ user.comment }}}</li>
+            <li class="comment-3">{{{ user.comment }}}</li>
+        </ul>
+    </div>   
+    <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{{ movie.title }}}</h5>
+            <p class="card-text"> {{{ movie.review }}}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="comment-1">{{{ user.comment }}}</li>
+            <li class="comment-2">{{{ user.comment }}}</li>
+            <li class="comment-3">{{{ user.comment }}}</li>
+        </ul>
+    </div> 
+    <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{{ getMovieApi movie.title }}}</h5>
+            <p class="card-text"> {{{ getMovieApi movie.review }}}</p>
+        </div>
+        <h4>Comments</h4>
+        <ul class="list-group list-group-flush">
+            <li class="comment-1">{{{ user.comment }}}</li>
+            <li class="comment-2">{{{ user.comment }}}</li>
+            <li class="comment-3">{{{ user.comment }}}</li>
+        </ul>
+    </div> 
+ </div>

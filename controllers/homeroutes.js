@@ -5,20 +5,20 @@ const isAdmin = require('../utils/isAdmin');
 
 router.get (`/`, async (req, res) =>{
 try {
-    const listData = await List.findByPk(req.params.id, {
-        include: [
-            {
-                model: Movie,
-                attributes: [title, poster, rating, run_time, summary]
-            },
-        ],
-    });
+    // const listData = await List.findByPk(req.params.id, {
+    //     include: [
+    //         {
+    //             model: Movie,
+    //             attributes: [title, poster, rating, run_time, summary]
+    //         },
+    //     ],
+    // });
 
-    const curatedList = listData.get({ plain: true })
+    // const curatedList = listData.get({ plain: true })
 
     res.render(`homepage`, {
-        curatedList,
-        logged_in: req.session.logged_in
+        // curatedList,
+        // logged_in: req.session.logged_in
     });
 } catch (error) {
     res.status(500).json(error);
