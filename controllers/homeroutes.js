@@ -91,9 +91,14 @@ router.get(`/movie`, withAuth, async (req, res) => {
 });
 
 
-router.get(`/user`, withAuth, async (req, res) => {
+router.get(`/user`, 
+// withAuth,
+async (req, res) => {
     try {
-        const userData = User.findByPk(req.session.user_id, {
+        const userData = User.findByPk(
+            // req.session.user_id,
+            1,
+             {
             attributes: { exclude:[`password`]},
             include: [{model: Review}]
         })
