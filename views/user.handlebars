@@ -1,0 +1,25 @@
+<!-- Splash Section -->
+{{ log this }}
+<div class = "d-flex flex-column splash-container">
+    <h1 class = "text-center p-4">Welcome {{ username }}!</h1>
+    <img class = "d-inline-flex m-3" src = "{{ movies.[0].poster }}" alt = "{{ movie.summary }}">
+</div>
+
+<!-- Reviews Section --> 
+{{#each reviews as |review|}}
+<h4 class="review-title m-3">Review</h4>
+    <div class="card m-3" style="width: 18rem;">
+        <div class="review">
+            <h5 class="review-title m-2">{{ review.movie.title }}</h5>
+            <h5 class = "user-name m-2"> {{ username }}</h5>
+            <p class="review-body m-2"> {{ review.body }}</p>
+        </div>
+        <h4 class = "comments m-2">Comments</h4>
+        <ul class="list-comment list-comment-flush">
+            {{#each review.comments as |comment|}}
+                 <li class="comment m-2">{{ comment.body }} - {{comment.user.username}}</li>
+            {{/each}}
+        </ul>
+    </div>  
+{{/each}}
+<script src="./js/profile.js"></script>
