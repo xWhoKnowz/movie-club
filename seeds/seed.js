@@ -20,21 +20,21 @@ const seedDatabase = async () => {
     for (const movies of movieData) {
       await Movie.create({
         ...movies,
-        list_id: lists[Math.floor(Math.random() * users.length)].id,
+        // list_id: lists[Math.floor(Math.random() * users.length)].id,
       });
     }  
 
     for (const reviews of reviewData) {
       await Review.create({
         ...reviews,
-        user_id: users[Math.floor(Math.random() * users.length)].id,
+        // user_id: users[Math.floor(Math.random() * users.length)].id,
       });
     }
 
     for (const comments of commentData) {
         await Comment.create({
           ...comments,
-          users_id: users[Math.floor(Math.random() * users.length)].id,
+          // users_id: users[Math.floor(Math.random() * users.length)].id,
         });
     }
 
