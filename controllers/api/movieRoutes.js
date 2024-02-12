@@ -1,7 +1,7 @@
-const router = require('express').Router();
-const { Movie } = require('../../models');
-const withAuth = require('../../utils/withAuth');
-const isAdmin = require('../../utils/isAdmin');
+const router = require(`express`).Router();
+const { Movie } = require(`../../models`);
+const withAuth = require(`../../utils/withAuth`);
+const isAdmin = require(`../../utils/isAdmin`);
 
 router.post('/', [withAuth, isAdmin], async (req, res) => {
   try {
