@@ -1,0 +1,26 @@
+.collapse.show {
+    visibility: visible;
+  }
+
+  .card {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .header {
+    margin-bottom: 15px;
+}
+
+.title {font-size: larger;
+    font-weight: bolder;
+}
+
+.lists {
+    margin-left: 40px;
+    margin-right: 80px;
+}
+
+.listBtn {
+    width: 300px;
+    margin: 2px;
+}
