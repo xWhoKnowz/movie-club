@@ -18,6 +18,7 @@
 .lists {
     margin-left: 40px;
     margin-right: 80px;
+    border: 1px solid black ;
 }
 
 .listBtn {
