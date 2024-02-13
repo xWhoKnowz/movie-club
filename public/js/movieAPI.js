@@ -1,5 +1,11 @@
 //fetch The Movie Database(TMDB) API - for all other movie information
 const tmdbKey = `468d5de192d37cae276cf12303a0be67`
+let movieTitle
+let moviePoster
+let movieRating;
+let movieRuntime
+let movieSummary;
+
 
 
 function getMovieApi(movie) {
@@ -67,8 +73,13 @@ function getOpenApi(movie) {
     movieData.appendChild(summary)
     container.appendChild(card)
     
+    movieTitle = data.Title
+    moviePoster = data.Poster
+    movieRating = data.Ratings[1].Value
+    movieRuntime = data.Runtime
+    movieSummary = data.Plot
 
-    document.querySelector(`#add`).addEventListener(`click`, addMovie)
+    document.querySelector(`#add`).addEventListener(`click`, addMovie(movieTitle, moviePoster, movieRating, movieRuntime, movieSummary))
   })
 };
 
@@ -101,11 +112,11 @@ form.appendChild(button)
 document.querySelector(`#movie-search`).addEventListener(`submit`, formSubmit)
 }  
 
-const addMovie = async function() {
+const addMovie = async function(movieTitle, moviePoster, movieRating, movieRuntime, movieSummary) {
 
-const archive = await fetch(`/movie/`, {
+const archive = await fetch(`/api/movie/`, {
   method: `POST`,
-  body: JSON.stringify({}),
+  body: JSON.stringify({ movieTitle, moviePoster, movieRating, movieRuntime, movieSummary }),
   headers: { 'Content-Type': 'application/json' },
 })
 
