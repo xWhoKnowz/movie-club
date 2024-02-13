@@ -55,7 +55,7 @@ console.log(error);
 
 router.get(`/login`, (req, res) => {
   if (req.session.logged_in) {
-    res.redirect(`/homepage`);
+    res.redirect(`/`);
     return;
   } else {
     res.render(`login`);
