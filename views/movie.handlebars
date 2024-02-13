@@ -1,11 +1,11 @@
 <!-- Movie Header section --->
 {{ log this }}
 <div class="movie-container row mt-4 m-2">
-    <img src="{{ poster }}" alt="{{ summary }}">
+    <img class="movie-page-poster align-items-center" src="{{ poster }}" alt="{{ summary }}">
     <div class="d-flex flex-wrap mt-2">
-        <div class="movie-card col-lg-5 col-sm-12">
-            <div class="movie-header">
-                <h2 class="movie-title">{{title}}</h2>
+        <div class="card movie-card col-lg-5 col-sm-12">
+            <div class="movie-header m-2">
+                <h2 class="movie-title-header">{{title}}</h2>
             </div>
             <ul class="list-group list-group-flush">
                 <li class="movie-run-time m-3">Run time: {{ run_time }} minutes</li>
@@ -15,84 +15,84 @@
             </ul>
         </div>
 
-        <div class="card col-lg-7 col-sm-12">
-            <div class="card-header">
+        <div class="card col-lg-7 col-sm-12 summary-card">
+            <div class="card-header summary">
                 Summary
             </div>
             <div class="card-body">
-                <blockquote class="blockquote mb-0">
+                <blockquote class="summary-paragraph blockquote mb-0">
                     <p>{{ summary }}</p>
                 </blockquote>
             </div>
         </div>
 
         <!-- Director/ Cast section --->
-        <div class="card-deck col-lg-3 col-md-4 col-sm-12 mt-4">
-            <div class="card d-flex flex-wrap">
+        {{!-- <div class="card-deck col-lg-3 col-md-4 col-sm-12 mt-4">
+            <div class="director-card card d-flex flex-wrap">
                 <img class="card-img-top" src="..." alt="Director">
                 <div class="card-body">
                     <h5 class="cast-name">{{ name }}</h5>
-                    <h5 class="cast-title">Director</h5>
+                    <h5 class="cast-title director-title">Director</h5>
                     <p class="card-text">{{ director }}</p>
                 </div>
             </div>
         </div>
 
         <div class="card-deck col-lg-3 col-md-4 col-sm-12 mt-4">
-            <div class="card d-flex flex-wrap m-2">
+            <div class="actor-card card d-flex flex-wrap m-2">
                 <img class="card-img-top" src="..." alt="Director">
                 <div class="card-body">
                     <h5 class="cast-name">{{ name }}</h5>
-                    <h5 class="cast-title">Actor</h5>
+                    <h5 class="cast-title actor-title">Actor</h5>
                     <p class="card-text">{{ actor }}</p>
                 </div>
             </div>
         </div>
         <div class="card-deck col-lg-3 col-md-4 col-sm-12 mt-4">
-            <div class="card d-flex flex-wrap m-2">
+            <div class="actor-card card d-flex flex-wrap m-2">
                 <img class="card-img-top" src="..." alt="Director">
                 <div class="card-body">
                     <h5 class="cast-name">{{ name }}</h5>
-                    <h5 class="cast-title">Actor</h5>
+                    <h5 class="cast-title actor-title">Actor</h5>
                     <p class="card-text">{{ actor }}</p>
                 </div>
             </div>
         </div>
 
         <div class="card-deck col-lg-3 col-md-4 col-sm-12 mt-4">
-            <div class="card d-flex flex-wrap m-2">
+            <div class="actor-card card d-flex flex-wrap m-2">
                 <img class="card-img-top" src="..." alt="Director">
                 <div class="card-body">
                     <h5 class="cast-name">{{ name }}</h5>
-                    <h5 class="cast-title">Actor</h5>
+                    <h5 class="cast-title actor-title">Actor</h5>
                     <p class="card-text">{{ actor }}</p>
                 </div>
             </div>
         </div>
 
-        <div class="card-deck col-lg-3 col-md-4 col-sm-12 mt-4">
-            <div class="card d-flex flex-wrap m-2">
+        <div class=" card-deck col-lg-3 col-md-4 col-sm-12 mt-4">
+            <div class="actor-card card d-flex flex-wrap m-2">
                 <img class="card-img-top" src="..." alt="Director">
                 <div class="card-body">
                     <h5 class="cast-name">{{ name }}</h5>
-                    <h5 class="cast-title">Actor</h5>
+                    <h5 class="cast-title actor-title">Actor</h5>
                     <p class="card-text">{{ actor }}</p>
                 </div>
             </div>
-        </div>
+        </div> --}}
     </div>
 
     <div>
         <!-- Reviews Section -->
         <h3 class="review-title m-2">Reviews</h3>
         {{#each reviews as |review|}}
-        <div class="card m-2 p-2" style="width: 18rem;">
+        <div class="card review-card m-2 p-2" style="width: 18rem;">
             <div class="review">
                 <h5 class="user-name"> {{ username }}</h5>
-                <p class="review-body"> {{ review.body }}</p>
+                <p class="review-body m-2"> {{ review.body }}</p>
             </div>
-            <h4 class="comments">Comments</h4>
-            <ul class="list-comment list-comment-flush">
+            <h4 class="comments m-2">Comments</h4>
+            <ul class="list-comment list-comment-flush m-2">
                 {{#each review.comments as |comment|}}
                 <li class="comment">{{ comment.body }} - {{comment.user.username}}</li>
                 {{/each}}
