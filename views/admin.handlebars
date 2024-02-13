@@ -4,7 +4,7 @@
     <section class="lists col-3 d-flex flex-column align-items-center">
       <h2 class="title">Movie Lists</h2>
       
-      <button class="btn-primary listBtn">
+      <button id="newList" class="btn-primary listBtn">
         <a href="">
           New List
         </a>
@@ -31,17 +31,18 @@
     </section>
 
 
-    <section class=" d-flex flex-column col-12">
+    <section id="movies" class=" d-flex flex-column col-12">
 
-      <section>
 
-        <form id="movie-search">
+
+      <section id="form">
+        {{!-- <form id="movie-search">
           <input type="text" id="movie-input" placeholder="Search for Movies...">
           <button type="submit" class="btn">Search</button>
-        </form>
+        </form> --}}
       </section>
 
-      <section class="card col-7"">
+      {{!-- <section class="card col-6">
         <div class=" card-header">
         {{Title}}
         <img class="card-img-top" src="" alt="Movie Poster">
@@ -51,56 +52,12 @@
           <li class="list-group-item">{{run_time}}</li>
           <li class="list-group-item">{{summary}}</li>
         </ul>
-      </section>
+      </section> --}}
 
-      <div class="card col-7"">
-        <div class=" card-header">
-        {{Title}}
-        <img class="card-img-top" src="" alt="Movie Poster">
-      </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">{{rating}}</li>
-        <li class="list-group-item">{{run_time}}</li>
-        <li class="list-group-item">{{summary}}</li>
-      </ul>
-      </div>
-
-      <div class="card col-7"">
-        <div class=" card-header">
-        {{Title}}
-        <img class="card-img-top" src="" alt="Movie Poster">
-      </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">{{rating}}</li>
-        <li class="list-group-item">{{run_time}}</li>
-        <li class="list-group-item">{{summary}}</li>
-      </ul>
-      </div>
-
-      <div class="card col-7"">
-        <div class=" card-header">
-        {{Title}}
-        <img class="card-img-top" src="" alt="Movie Poster">
-      </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">{{rating}}</li>
-        <li class="list-group-item">{{run_time}}</li>
-        <li class="list-group-item">{{summary}}</li>
-      </ul>
-      </div>
-
-      <div class="card col-7">
-        <div class=" card-header">
-        {{Title}}
-        <img class="card-img-top" src="" alt="Movie Poster">
-      </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">{{rating}}</li>
-        <li class="list-group-item">{{run_time}}</li>
-        <li class="list-group-item">{{summary}}</li>
-      </ul>
-      </div>
-
+    </section>
+    <section class="card col-6">
+      <p>Currently added</p>
+      <div></div>
     </section>
 
 
