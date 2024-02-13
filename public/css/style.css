@@ -9,6 +9,15 @@
   font-weight: 700;
   color: #EB3227;
 }
+
+/* footer styles */
+.footer {
+  font-family: "Lato", sans-serif;
+  font-size: 2em;
+  font-weight: 400;
+  color: #A7B41E;
+  background-color: #f3f4eb;
+}
 .collapse.show {
     visibility: visible;
   }
@@ -61,9 +70,9 @@ body {
   background-color: #f3f4eb;
 }
 
-.movie-title {
+.movie-title h5 {
   font-family: "Lato", sans-serif;
-  font-size: 2em;
+  font-size: 1em;
   font-weight: 600;
   color: #0F7EE7;
 }
@@ -88,16 +97,9 @@ body {
   font-family: "Lato", sans-serif;
 }
 
-.movie-card {
+.movie-title {
   font-family: "Lato", sans-serif;
   font-size: 4em;
   font-weight: 800;
   color: #EB3227;
-}
-
-.review-title{
-  font-family: "Lato", sans-serif;
-  font-size: 2em;
-  font-weight: 600;
-  color: #0F7EE7;
 }
