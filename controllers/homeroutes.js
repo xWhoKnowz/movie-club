@@ -90,7 +90,9 @@ async (req, res) => {
       ],
     });
 
+
     const movieList = movieData.get({ plain: true });
+    console.log(movieList);
 
     res.render(`movie`, {
       ...movieList,

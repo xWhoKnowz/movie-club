@@ -1,15 +1,15 @@
 <!-- Movie Header section --->
 {{ log this }}
-<div class="row mt-4 m-2">
+<div class="movie-container row mt-4 m-2">
     <img src="{{ poster }}" alt="{{ summary }}">
-    <div class="d-flex flex-wrap">
-        <div class="card col-lg-5 col-sm-12">
-            <div class="card-header">
+    <div class="d-flex flex-wrap mt-2">
+        <div class="movie-card col-lg-5 col-sm-12">
+            <div class="movie-header">
                 <h2 class="movie-title">{{title}}</h2>
             </div>
             <ul class="list-group list-group-flush">
-                <li class="movie-run-time m-1">Run time: {{ run_time }} minutes</li>
-                <li class="movie-rating m-1">Rating: {{ rating }}</li>
+                <li class="movie-run-time m-3">Run time: {{ run_time }} minutes</li>
+                <li class="movie-rating m-3">Rating: {{ rating }}</li>
                 {{!-- <li class="movie-genre">Genre: {{ genres }}</li>
                 <li class="movie-lang">Language: {{ name }}</li> --}}
             </ul>
@@ -27,8 +27,7 @@
         </div>
 
         <!-- Director/ Cast section --->
-        <h3>Director/ Cast</h3>
-        <div class="card-deck col-3 mt-4">
+        <div class="card-deck col-lg-3 col-md-4 col-sm-12 mt-4">
             <div class="card d-flex flex-wrap">
                 <img class="card-img-top" src="..." alt="Director">
                 <div class="card-body">
@@ -81,25 +80,24 @@
                 </div>
             </div>
         </div>
+    </div>
 
-
-        <div>
-            <!-- Reviews Section -->
-            {{#each reviews as |review|}}
-            <div class="card d-flex p-2" style="width: 18rem;">
-                <div class="review">
-                    <h5 class="review-title">{{ review.movie.title }}</h5>
-                    <h5 class="user-name"> {{ username }}</h5>
-                    <p class="review-body"> {{ review.body }}</p>
-                </div>
-                <h4 class="comments">Comments</h4>
-                <ul class="list-comment list-comment-flush">
-                    {{#each review.comments as |comment|}}
-                    <li class="comment">{{ comment.body }} - {{comment.user.username}}</li>
-                    {{/each}}
-                </ul>
+    <div>
+        <!-- Reviews Section -->
+        <h3 class="review-title m-2">Reviews</h3>
+        {{#each reviews as |review|}}
+        <div class="card m-2 p-2" style="width: 18rem;">
+            <div class="review">
+                <h5 class="user-name"> {{ username }}</h5>
+                <p class="review-body"> {{ review.body }}</p>
             </div>
-            {{/each}}
+            <h4 class="comments">Comments</h4>
+            <ul class="list-comment list-comment-flush">
+                {{#each review.comments as |comment|}}
+                <li class="comment">{{ comment.body }} - {{comment.user.username}}</li>
+                {{/each}}
+            </ul>
         </div>
+        {{/each}}
     </div>
 </div>
