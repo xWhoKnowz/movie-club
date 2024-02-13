@@ -31,7 +31,7 @@ try {
 
 router.get(`/admin`, [withAuth, isAdmin], async (req, res) => {
   try {
-    const lists = await List.findAll({
+    const list = await List.findAll({
       include: [
         {
           model: Movie,

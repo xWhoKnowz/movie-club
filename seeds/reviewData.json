@@ -1,37 +1,72 @@
 [
     {
         "title": "Jason Statham should be a household name NOW",
-        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "body": "Incredible action with great dialogue from one of my favorite actors of all time!",
         "movie_id": 1,
         "user_id": 3,
         "rating": 9.5
     },
     {
         "title": "Sydney Sweeney deserved better!",
-        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "body": "I believe that talent is undeniable, but sometimes that talent is shrouded by either lack luster co-stars or a shaky plot.In the case of this movie it was both.",
         "movie_id": 3,
         "user_id": 2,
         "rating": 3.5
     },
     {
         "title": "I'm Kenough.",
-        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "body": "A star studdest cast with an impecable score what could go wrong? In my opinion this movie had nothing wrong AT ALL!",
         "movie_id": 2,
         "user_id": 1,
         "rating": 10
     },
     {
         "title": "Oopsyheimer",
-        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "body": "A movie that spent most of its multibillion dollar budget on hiring all these talented actors and effects, but not a single dime on direction or scriptwriting.",
         "movie_id": 4,
         "user_id": 5,
         "rating": 6.5
     },
     {
         "title": "Zac Efron's talent truly shined through.",
-        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "body": "I did not know I was such a Zac Efron fan until The Iron Claw removed the veil that is High School Musical from my eyes.",
         "movie_id": 5,
         "user_id": 4,
         "rating": 10
+    },
+    {
+        "title": "Timothée Chalamet has got to retire NOW!",
+        "body": "Flat performance from a man of magic and little to no actual wonder behind any of his words nor the scenery provided by the set.",
+        "movie_id": 6,
+        "user_id": 1,
+        "rating": 1.5
+    },
+    {
+        "title": "Emma Stone grants a stark reminder of how she is one of Hollywood's best.",
+        "body": "Poor Things set an example for other directors and screen writers as to what the limitations of a film are: nothing but the mind.",
+        "movie_id": 7,
+        "user_id": 5,
+        "rating": 9.5
+    },
+    {
+        "title": "Nothing will be enough to save this dumpster fire of a film.",
+        "body": "As incredible of a cast that was provided, Saltburn was sure to succeed, however the boring script nor the mediocre direction couldn't hold up it's end of the bargain.",
+        "movie_id": 8,
+        "user_id": 4,
+        "rating": 3
+    },
+    {
+        "title": "Really?",
+        "body": "Another Disney remake released to change how older audiences think about classic characters and to create a narrative for a new audience that magice can save anything. Anything but this film apparently.",
+        "movie_id": 9,
+        "user_id": 1,
+        "rating": 2
+    },
+    {
+        "title": "Why was Regina George the main character?",
+        "body": "I myself love the original version of Mean Girls, released two decades prior to the release of the remake, and I also love musicals. However what this remake lacked where the orignal shined was the ability to highlight the cruelness of Regina George whie making her seem human and making viewers feel empathy once she gets her comeuppance, while the 2024 version only highlights Regina George.",
+        "movie_id": 10,
+        "user_id": 2,
+        "rating": 4
     }
 ]
