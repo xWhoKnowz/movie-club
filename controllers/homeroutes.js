@@ -35,19 +35,10 @@ router.get(`/admin`, [withAuth, isAdmin], async (req, res) => {
       include: [
         {
           model: Movie,
-          attributes: [title, poster, rating, run_time, summary],
+          // attributes: [title, poster, rating, run_time, summary],
         },
       ],
     });
-
-        const lists = await List.findAll({
-            include: [
-                {
-                    model: Movie,
-                    // attributes: [title, poster, rating, run_time, summary]
-                },
-            ],
-        });
     
         const allLists = lists.map(list => list.get({plain: true}))
 
@@ -57,7 +48,7 @@ router.get(`/admin`, [withAuth, isAdmin], async (req, res) => {
             logged_in: req.session.logged_in
         });
     } catch (error) {
-        console.log(error);
+console.log(error);
         res.status(500).json(error);
     }
 });
@@ -103,10 +94,7 @@ async (req, res) => {
   }
 });
 
-router.get(
-  `/user`,
-  // withAuth,
-  async (req, res) => {
+router.get(`/user`, withAuth, async (req, res) => {
     try {
       const userData = await User.findByPk(
         // req.session.user_id,

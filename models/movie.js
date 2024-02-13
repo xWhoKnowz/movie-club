@@ -12,7 +12,7 @@ Movie.init(
         autoIncrement: true,
       },
       run_time: {
-          type: DataTypes.INTEGER,
+          type: DataTypes.STRING,
           allowNull: false,
         },
       title: {
@@ -28,7 +28,7 @@ Movie.init(
         allowNull: false,
       },
       rating: {
-          type: DataTypes.DECIMAL (10,1),
+          type: DataTypes.STRING,
           allowNull: false,
       },
       list_id: {
@@ -39,14 +39,14 @@ Movie.init(
         },
         allowNull: false
       },
-      user_id: {
-        type: DataTypes.INTEGER,
-        references: {
-          model: `user`,
-          key: `id`          
-        },
-        allowNull: false
-      }
+      // user_id: {
+      //   type: DataTypes.INTEGER,
+      //   references: {
+      //     model: `user`,
+      //     key: `id`          
+      //   },
+      //   allowNull: false
+      // }
     },
     {
       sequelize,
