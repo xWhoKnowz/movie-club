@@ -30,6 +30,15 @@ Comment.belongsTo(User, {
     foreignKey: 'user_id'
 });
 
+User.hasMany(Movie, {
+    foreignKey: 'user_id',
+    onDelete: 'CASCADE'
+});
+
+Movie.belongsTo(User, {
+    foreignKey: 'user_id'
+});
+
 List.hasMany(Movie, {
     foreignKey: 'list_id',
 });
