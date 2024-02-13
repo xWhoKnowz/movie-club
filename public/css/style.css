@@ -1,3 +1,14 @@
+/* nav bar styles */
+.navbar {
+  background-color: #f3f4eb;
+}
+
+.navbar-brand {
+  font-family: "Lato", sans-serif;
+  font-size: 2em;
+  font-weight: 700;
+  color: #EB3227;
+}
 .collapse.show {
     visibility: visible;
   }
@@ -11,8 +22,9 @@
     margin-bottom: 15px;
 }
 
-.title {font-size: larger;
-    font-weight: bolder;
+.title {
+  font-size: larger;
+  font-weight: bolder;
 }
 
 .lists {
@@ -24,4 +36,68 @@
 .listBtn {
     width: 300px;
     margin: 2px;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+/* Styles for user.handlebars */
+.welcome {
+  font-family: "Lato", sans-serif;
+  font-size: 5em;
+  font-weight: 900;
+  color: #EB3227;
+}
+
+.review-title {
+  font-family: "Lato", sans-serif;
+  font-size: 4em;
+  font-weight: 800;
+  color: #EB3227;
+}
+
+.review-comment-card {
+  background-color: #f3f4eb;
+}
+
+.movie-title {
+  font-family: "Lato", sans-serif;
+  font-size: 2em;
+  font-weight: 600;
+  color: #0F7EE7;
+}
+
+.comments {
+  font-family: "Lato", sans-serif;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #0F7EE7;
+
+}
+
+.list-comment {
+  font-family: "Lato", sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  color: #A7B41E;
+}
+
+/* styles for movie.handler */
+.movie-container {
+  font-family: "Lato", sans-serif;
+}
+
+.movie-card {
+  font-family: "Lato", sans-serif;
+  font-size: 4em;
+  font-weight: 800;
+  color: #EB3227;
+}
+
+.review-title{
+  font-family: "Lato", sans-serif;
+  font-size: 2em;
+  font-weight: 600;
+  color: #0F7EE7;
 }

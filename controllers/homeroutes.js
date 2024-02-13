@@ -31,7 +31,7 @@ try {
 
 router.get(`/admin`, [withAuth, isAdmin], async (req, res) => {
   try {
-    const lists = await List.findAll({
+    const list = await List.findAll({
       include: [
         {
           model: Movie,
@@ -81,7 +81,9 @@ async (req, res) => {
       ],
     });
 
+
     const movieList = movieData.get({ plain: true });
+    console.log(movieList);
 
     res.render(`movie`, {
       ...movieList,
