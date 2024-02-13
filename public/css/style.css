@@ -9,6 +9,20 @@
   font-weight: 700;
   color: #EB3227;
 }
+/* movie poster styles */
+.movie-poster {
+  width: fit-content;
+  height: fit-content;
+}
+
+/* footer styles */
+.footer {
+  font-family: "Lato", sans-serif;
+  font-size: 2em;
+  font-weight: 400;
+  color: #A7B41E;
+  background-color: #f3f4eb;
+}
 .collapse.show {
     visibility: visible;
   }
@@ -89,15 +103,82 @@ body {
 }
 
 .movie-card {
+  background-color: #f3f4eb;
+}
+
+.movie-title-header {
   font-family: "Lato", sans-serif;
-  font-size: 4em;
+  font-size: 3em;
   font-weight: 800;
   color: #EB3227;
 }
 
-.review-title{
+.movie-run-time {
   font-family: "Lato", sans-serif;
-  font-size: 2em;
+  font-size: 1em;
+  font-weight: 400;
+  color: #A7B41E;
+}
+
+.movie-rating {
+  font-family: "Lato", sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  color: #A7B41E;
+}
+
+.summary-card{
+  background-color: #f3f4eb;
+}
+
+.summary {
+  font-family: "Lato", sans-serif;
+  font-size: 3em;
+  font-weight: 800;
+  color: #EB3227;
+}
+
+.summary-paragraph {
+  font-family: "Lato", sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  color: #A7B41E;
+}
+
+.review-card {
+  background-color: #f3f4eb;
+}
+
+.review-body {
+  font-family: "Lato", sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  color: #A7B41E;
+}
+
+.movie-page-poster {
+  width: fit-content;
+  height: fit-content;
+}
+
+/* .director-card {
+  background-color: #f3f4eb;
+}
+
+.actor-card {
+  background-color: #f3f4eb;
+}
+
+.director-title {
+  font-family: "Lato", sans-serif;
+  font-size: 1.5em;
   font-weight: 600;
   color: #0F7EE7;
 }
+
+.actor-title {
+  font-family: "Lato", sans-serif;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #0F7EE7;
+} */
