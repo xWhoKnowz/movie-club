@@ -101,9 +101,13 @@ form.appendChild(button)
 document.querySelector(`#movie-search`).addEventListener(`submit`, formSubmit)
 }  
 
-const addMovie = function() {
+const addMovie = async function() {
 
-
+const archive = await fetch(`/movie/`, {
+  method: `POST`,
+  body: JSON.stringify({}),
+  headers: { 'Content-Type': 'application/json' },
+})
 
 }
 
