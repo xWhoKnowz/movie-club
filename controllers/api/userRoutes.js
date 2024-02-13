@@ -11,6 +11,9 @@ router.post("/", async (req, res) => {
 
     req.session.save(() => {
       req.session.logged_in = true;
+      if(newUser.is_admin){
+        req.session.is_admin = true;
+      }
       
       res.status(200).json(newUser);
     });
@@ -21,8 +24,9 @@ router.post("/", async (req, res) => {
 
 router.post(`/login`, async (req, res) => {
   try {
+    console.log(req.body);
     const user = await User.findOne({ where: { email: req.body.email } });
-
+    console.log(user);
     if (!user) {
       res
         .status(400)
@@ -31,6 +35,8 @@ router.post(`/login`, async (req, res) => {
         });
       return;
     }
+
+    console.log(user);
 
     const password = await user.checkPassword(req.body.password);
 
@@ -46,6 +52,9 @@ router.post(`/login`, async (req, res) => {
     req.session.save(() => {
       req.session.user_id = user.id;
       req.session.logged_in = true;
+      if(user.is_admin){
+        req.session.is_admin = true;
+      }
 
       res.json({ user: user, message: "Welcome to Fresh Tomatoes!" });
     });

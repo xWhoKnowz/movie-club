@@ -40,15 +40,26 @@ router.get(`/admin`, [withAuth, isAdmin], async (req, res) => {
       ],
     });
 
-    const allLists = lists.get({ plain: true });
+        const lists = await List.findAll({
+            include: [
+                {
+                    model: Movie,
+                    // attributes: [title, poster, rating, run_time, summary]
+                },
+            ],
+        });
+    
+        const allLists = lists.map(list => list.get({plain: true}))
 
-    res.render(`admin`, {
-      allLists,
-      logged_in: req.session.logged_in,
-    });
-  } catch (error) {
-    res.status(500).json(error);
-  }
+
+        res.render(`admin`, {
+            allLists,
+            logged_in: req.session.logged_in
+        });
+    } catch (error) {
+        console.log(error);
+        res.status(500).json(error);
+    }
 });
 
 router.get(`/login`, (req, res) => {
@@ -131,5 +142,24 @@ router.get(
     }
   }
 );
+
+
+router.get(`/user`, withAuth, async (req, res) => {
+    try {
+        const userData = await User.findByPk(req.session.user_id, {
+            attributes: { exclude:[`password`]},
+            include: [{model: Review}]
+        })
+
+        const user = userData.get({ plain: true });
+
+        res.render(`user`, {
+         ...user,
+         logged_in: true   
+        });    
+    } catch (error) {
+        res.status(500).json(error);
+    }
+});
 
 module.exports = router;
