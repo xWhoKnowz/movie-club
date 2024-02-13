@@ -5,18 +5,30 @@ const isAdmin = require(`../../utils/isAdmin`);
 
 router.post('/', [withAuth, isAdmin], async (req, res) => {
   try {
+    console.log(req.body);
+
     const newMovie = await Movie.create({
-        id: req.body.id,
-        run_time: req.body.runtime,
-        title: req.body.original_title,
-        poster: req.body.Poster,
-        summary: req.body.overview,
-        rating: req.body.rating,
-        list_id: req.body.list_id,
+        // id: req.body.id,
+        title: req.body.movieTitle,
+        poster: req.body.moviePoster,
+        rating: req.body.movieRating,
+        run_time: req.body.movieRuntime,
+        summary: req.body.movieSummary,
+        list_id: 1
+        // list_id: req.body.list_id
     });
+
+    // {
+    //   movieTitle: 'The Matrix',
+    //   moviePoster: 'https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg',
+    //   movieRating: { Source: 'Rotten Tomatoes', Value: '83%' },
+    //   movieRuntime: '136 min',
+    //   movieSummary: 'When a beautiful stranger leads computer hacker Neo to a forbidding underworld, he discovers the shocking truth--the life he knows is the elaborate deception of an evil cyber-intelligence.'
+    // }
 
     res.status(200).json(newMovie);
   } catch (err) {
+    console.log(err);
     res.status(400).json(err);
   }
 });
